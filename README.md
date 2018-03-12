@@ -20,9 +20,11 @@ This is an aggregator of all the music going on in Houston weekly.
 
 ## How to run the code so far:
 	1. clone the repo
-	2. install scrapy
+	2. install scrapy && install beautiful soup
 	3. cd into songkick dir
 	4. run the command 'scrapy crawl songkick'
+	5. cd to project root
+	6. run soup.py
 
 ## How to delete the HTML that are scrapped:
 	find . -type f -iname "*.html" -delete

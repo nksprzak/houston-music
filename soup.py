@@ -16,7 +16,8 @@ for venue in files:
 			time = li.find('time').get('datetime')
 			band = li.find('p').find('strong').get_text()
 			venue_name = li.find('p').find_next('p').find('a').get_text()
-			json = {'band' : band, 'time' : time, 'venue' : venue_name}
+			link = "https://www.songkick.com%s" % li.find('a').get('href')
+			json = {'band' : band, 'time' : time, 'venue' : venue_name, 'link' : link}
 			print json
 	
 	print '\n'

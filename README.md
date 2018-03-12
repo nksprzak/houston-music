@@ -16,6 +16,7 @@ This is an aggregator of all the music going on in Houston weekly.
 ## Advanced aspects
 	1. Upcoming acts whose tickets are going on sale that week
 	2. Spotify links to the artists as another part of the JSON.
+	3. Add price to the JSON data
 
 
 ## How to run the code so far:

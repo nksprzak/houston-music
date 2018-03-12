@@ -1,0 +1,6 @@
+Guide to scrapy:
+
+- This is specifically for SongKick. Need to determine which venues use Songkick.
+
+	fetch(url)
+	response.xpath('//*[@class="artists summary"]//strong//text()').extract()

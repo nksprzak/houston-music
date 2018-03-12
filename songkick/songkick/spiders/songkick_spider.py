@@ -10,6 +10,11 @@ class SongkickSpider(scrapy.Spider):
 			'https://www.songkick.com/venues/2861788-revention-music-center/calendar',
 			'https://www.songkick.com/venues/108-warehouse-live/calendar',
 			'https://www.songkick.com/venues/3205243-white-oak-music-hall/calendar'
+			'https://www.songkick.com/venues/3357044-smart-financial-centre/calendar',
+			'https://www.songkick.com/venues/9786-stereo-live/calendar',
+			'https://www.songkick.com/venues/492-cynthia-woods-mitchell-pavilion/calendar',
+			'https://www.songkick.com/venues/646361-fitzgeralds/calendar',
+			'https://www.songkick.com/venues/11403-firehouse-saloon/calendar'
 		]
 		for url in urls:
 			yield scrapy.Request(url=url, callback=self.parse)

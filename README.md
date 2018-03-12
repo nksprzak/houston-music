@@ -23,3 +23,6 @@ This is an aggregator of all the music going on in Houston weekly.
 	2. install scrapy
 	3. cd into songkick dir
 	4. run the command 'scrapy crawl songkick'
+
+## How to delete the HTML that are scrapped:
+	find . -type f -iname "*.html" -delete

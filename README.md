@@ -16,3 +16,10 @@ This is an aggregator of all the music going on in Houston weekly.
 ## Advanced aspects
 	1. Upcoming acts whose tickets are going on sale that week
 	2. Spotify links to the artists as another part of the JSON.
+
+
+## How to run the code so far:
+	1. clone the repo
+	2. install scrapy
+	3. cd into songkick dir
+	4. run the command 'scrapy crawl songkick'

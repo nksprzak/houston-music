@@ -4,7 +4,7 @@ import os,glob,json
 files = []
 data = []
 
-os.chdir("/home/nkasprzak/houston-music/songkick")
+os.chdir("%s/houston-music/songkick" % os.path.expanduser('~'))
 for file in glob.glob("*.html"):
     files.append(file)
 

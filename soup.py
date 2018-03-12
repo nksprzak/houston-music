@@ -10,7 +10,7 @@ for file in glob.glob("*.html"):
 
 for venue in files:
 
-	soup = BeautifulSoup(open("/home/nkasprzak/houston-music/songkick/%s" % venue), "html.parser")
+	soup = BeautifulSoup(open("%s/houston-music/songkick/%s" % (os.path.expanduser('~'), venue)), "html.parser")
 
 	for li in soup.find_all('li'):
 		if li.get('title') != None:

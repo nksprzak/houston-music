@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import os,glob,json
 
 files = []
+data = []
 
 os.chdir("/home/nkasprzak/houston-music/songkick")
 for file in glob.glob("*.html"):
@@ -17,7 +18,8 @@ for venue in files:
 			band = li.find('p').find('strong').get_text()
 			venue_name = li.find('p').find_next('p').find('a').get_text()
 			link = "https://www.songkick.com%s" % li.find('a').get('href')
-			json = {'band' : band, 'time' : time, 'venue' : venue_name, 'link' : link}
-			print json
+			entry = {'band' : band, 'time' : time, 'venue' : venue_name, 'link' : link}
+			data.append(entry)
 	
-	print '\n'
+with open('songkick_data.txt', 'w') as outfile:
+    json.dump(data, outfile)

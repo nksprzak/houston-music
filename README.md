@@ -25,6 +25,7 @@ This is an aggregator of all the music going on in Houston weekly.
 	4. run the command 'scrapy crawl songkick'
 	5. cd to project root
 	6. run soup.py
+	7. creates a JSON songkick_data.txt in the songkick dir
 
 ## How to delete the HTML that are scrapped:
 	find . -type f -iname "*.html" -delete

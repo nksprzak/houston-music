@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import os,glob
+import os,glob,json
 
 files = []
 
@@ -13,7 +13,10 @@ for venue in files:
 
 	for li in soup.find_all('li'):
 		if li.get('title') != None:
-			print li.find('time').get('datetime')
-			print li.find('p').find('strong').get_text()
+			time = li.find('time').get('datetime')
+			band = li.find('p').find('strong').get_text()
+			venue_name = li.find('p').find_next('p').find('a').get_text()
+			json = {'band' : band, 'time' : time, 'venue' : venue_name}
+			print json
 	
 	print '\n'
